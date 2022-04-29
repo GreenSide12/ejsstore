@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkery Premium</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/index.css">    
+    <script id='cqdx'>const j1j = "<%= pid %>";</script>
+    <script id='bsjs' src="/bootstrap.js" defer></script>
+    <script src="https://kit.fontawesome.com/f224bfb4fe.js" crossorigin="anonymous"></script>
+    <script src="/theme.js" defer></script>
+    <script src="/info.js" defer></script>
+    <script id='cxdi'>const aqx = "<%= iqd %>";</script>
+    <script id='jvjs' src="/jv.js" defer></script>
+    <script id='prid'>const prid = "<%= pid %>";</script>
+    <script id='kas' src="/kas.js" defer></script>
+    <script id='sqdn' src="/sqdn.js" defer></script>
+</head>
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+  body {
+    background-color: #f1f1f1;
+    font-family: Raleway;
+    text-align: center;  
+    margin: 100px auto;
+  }
+
+  .tab {
+  display: none;
+}
+  
+  .content {
+    background-color: #ffffff;
+    margin: 100px auto;
+    font-family: Raleway;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+  }
+  
+  h1 {
+    text-align: center;  
+  }
+  
+  input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+  }
+  
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+  
+  /* Hide all steps by default: */
+  .prev {
+    background-color: transparent;
+    color: #1d1d1d;
+    border: none;
+    padding: 0px 0px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+  }
+
+
+  .btn {
+    background-color: #04AA6D;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: #04AA6D;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  
+  .dscbutton {
+    background-color: #4e5d94;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+  }
+
+  
+  .payp-auth:hover {
+    opacity: 0.8;
+  }
+  
+  #prevBtn {
+    background-color: #bbbbbb;
+  }
+
+  .step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.stepactive {
+  opacity: 1;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+}
+  
+  /* Make circles that indicate the steps of the form: */
+</style>  
+
+<body>
+  <div class="tab">
+  <div class='content'>
+    <h1><strong>Item Confirmation</strong></h1>
+    <center><p>Required Data for Purchasing </p></center> <br>
+    <div class='form-group'>
+      
+            <p><strong>You are Purchasing:</strong> <%= pnme %></p>
+        
+          
+            <div style="overflow:auto;">
+              <div style="float:center;">
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Continue <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div style="text-align:center;margin-top:40px;">
+              <span class="stepactive"></span>
+              <span class="step"></span>
+            </div>
+      
+    </div>
+</div>
+</div>
+  
+  <div class="tab">
+    <div class='content'>
+      <div style="float:left;">
+
+        <button type="button" class="prev"  onclick="nextPrev(-1)"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        
+      </div>
+        <h1><strong><%= pnme %></strong></h1>
+        <center><p>Required Data for Purchasing </p></center> <br>
+        <div class='form-group'>
+            <form action="/" method="post">    
+                <div id='cvf'></div>
+                <input type="text" id='dctag' class="form-text" placeholder="Discord Tag ex. Salehin12#5005 *" name="dctag" required> 
+                <input type="hidden" name=pid value="<%= pid %>">
+                <input type="hidden" name="Oia83nj832y3" value="FHJu3hruhv8tnuohgnw3jmy4h3"> 
+                <input type="text" id='dcid' class="form-text" placeholder="Discord Id (Required)" name="dcid" required maxlength="18" onkeypress="return isNumberKey(event)">
+                <p>In our server type <b>>id</b> the bot will reply your id</p>
+                <div id="js78"></div><br>
+                <input type="submit" value="Continue To Payment" class="btn" id="submit">
+                <div id="k81s"></div> <br>
+       
+                <div id='cvf'></div>
+                <div style="text-align:center;margin-top:40px;">
+                  <span class="step"></span>
+                  <span class="stepactive" ></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
